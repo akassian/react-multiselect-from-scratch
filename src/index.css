@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+
+  .display {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Dropdown */
+.dropdown-container {
+  margin: 12px;
+  position: relative;
+  display: inline-block;
+
+  .dropdown {
+    background-color: white;
+    border: 1.5px solid darkgray;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+
+    label {
+      font-size: 12px;
+      color: darkgray;
+      background: white;
+      padding: 0 5px;
+      position: absolute;
+      top: -8px;
+      left: 10px;
+    }
+
+    .dropdown-selected {
+      padding-right: 20px;
+    }
+
+    .dropdown-arrow {
+      font-size: small;
+      color: darkgray;
+      position: absolute;
+      right: 10px;
+      bottom: 13px;
+    }
+  }
+
+  .dropdown.active {
+    border: 1.5px solid cornflowerblue;
+
+    label {
+      color: cornflowerblue;
+    }
+  }
+
+  .dropdown-options {
+    width: max-content;
+    min-width: 100%;
+    max-height: 200px;
+    position: absolute;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+    .dropdown-option {
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .dropdown-option.selected {
+      background-color: lightsteelblue;
+    }
+  }
+}

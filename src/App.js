@@ -6,6 +6,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('Option 3');
 
+  const optionsLong = Array.from({ length: 30 }, (_, i) => `Option ${i + 1}`);
   const [isOpenMulti, setIsOpenMulti] = useState(false);
   const [selectedMulti, setSelectedMulti] = useState(['Option 3']);
 
@@ -39,7 +40,7 @@ function App() {
         <i>{`Selected: ${selected}`}</i>
         <Dropdown
           label='Tag'
-          options={['Option 1', 'Option 2', 'Option 3']}
+          options={optionsLong}
           multiselect={false}
           selectedOptions={selected}
           onSelect={selected => setSelected(selected)}
@@ -54,7 +55,7 @@ function App() {
         <i>{`Selected: ${selectedMulti}`}</i>
         <Dropdown
           label='Tag'
-          options={['Option 1', 'Option 2', 'Option 3']}
+          options={optionsLong}
           multiselect={true}
           selectedOptions={selectedMulti}
           onSelect={selected => setSelectedMulti(selected)}

@@ -1,3 +1,5 @@
+<img width="596" alt="image" src="https://github.com/user-attachments/assets/2340018a-9e3d-4579-bd57-0c5a03dd2bd5" />
+
 # Instructions
 Run `npm install` (I used npm -v 9.6.7 and node -v 18.17.1). `npm start` and application should run on [http://localhost:3000/](http://localhost:3000/)
 
